@@ -1,1 +1,43 @@
-<p>login works!</p>
+<app-navbar></app-navbar>
+
+<div style="height: 500px">
+  <form #loginForm="ngForm" (submit)="login(loginForm)">
+    <div
+      style="
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 60px;
+      "
+    >
+      <h1>Iniciar sesion</h1>
+
+      <input
+        type="email"
+        id="cont-email"
+        placeholder="Correo"
+        required
+        pInputText
+        name="email"
+        [(ngModel)]="userLogin.email"
+        style="margin-top: 20px; width: 60%"
+      />
+      <br />
+
+      <input
+        type="password"
+        id="cont-password"
+        placeholder="Contraseña"
+        required
+        pInputText
+        name="password"
+        [(ngModel)]="userLogin.password"
+        style="margin-top: 20px; width: 60%"
+      />
+      <br />
+      <div style="margin-top: 20px">
+        <p-button type="submit">Registrarse</p-button>
+      </div>
+    </div>
+  </form>
+</div>

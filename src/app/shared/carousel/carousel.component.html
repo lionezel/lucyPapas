@@ -1,0 +1,28 @@
+<div>
+    <p-carousel
+      [value]="items"
+      [numVisible]="7"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-items pTemplate="item">
+        <div
+          class="border-1 surface-border border-round m-1 text-center py-1 px-1"
+        >
+          <div class="mb-3" style="width: 100%">
+            <img
+              [src]="items.poster_path "
+              [alt]="items.name"
+              class="w-6 shadow-2"
+              style="width: 100%; border-radius: 15px; cursor: pointer"
+              routerLink="/movies/{{ items.id }}"
+            />
+          </div>
+          <div>
+            <h4 class="mb-1">{{ items.title }}</h4>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+  

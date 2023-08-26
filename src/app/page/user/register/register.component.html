@@ -1,33 +1,54 @@
 <app-navbar></app-navbar>
 
-<form #registroForm="ngForm" (submit)="registro(registroForm)">
-  <label for="cont-name">Nombre</label>
-  <input
-    type="text"
-    id="cont-name"
-    placeholder="Nombre"
-    required
-    name="name"
-    [(ngModel)]="userRegister.name"
-  />
+<div style="height: 500px">
+  <form #registroForm="ngForm" (submit)="registro(registroForm)">
+    <div
+      style="
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 60px;
+      "
+    >
+      <h1>Registrate</h1>
+      <input
+        type="text"
+        id="cont-name"
+        placeholder="Nombre"
+        required
+        pInputText
+        name="name"
+        [(ngModel)]="userRegister.name"
+        style="margin-top: 20px; width: 60%"
+      />
+      <br />
 
-  <label for="cont-email">Correo</label>
-  <input
-    type="text"
-    id="cont-email"
-    placeholder="Correo"
-    required
-    name="email"
-    [(ngModel)]="userRegister.email"
-  />
+      <input
+        type="email"
+        id="cont-email"
+        placeholder="Correo"
+        required
+        pInputText
+        name="email"
+        [(ngModel)]="userRegister.email"
+        style="margin-top: 20px; width: 60%"
+      />
+      <br />
 
-  <label for="cont-password">Contraseña</label>
-  <input
-    type="text"
-    id="cont-password"
-    placeholder="Contraseña"
-    required
-    name="password"
-    [(ngModel)]="userRegister.password"
-  />
-</form>
+      <input
+        type="password"
+        id="cont-password"
+        placeholder="Contraseña"
+        required
+        pInputText
+        name="password"
+        [(ngModel)]="userRegister.password"
+        style="margin-top: 20px; width: 60%"
+      />
+      <br />
+      <div style="margin-top: 20px">
+        <p-button type="submit">Registrarse</p-button>
+      </div>
+    </div>
+  </form>
+</div>
