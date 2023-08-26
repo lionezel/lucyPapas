@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lucypapas-45283": {
+      "hosting": {
+        "lucyPapas": [
+          "lucypapas-45283"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lucypapas-45283"
+  }
+}
