@@ -1,0 +1,11 @@
+.category  {
+  width: 20%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.category:hover {
+  width: 600px;
+  opacity: 1;
+  transform: scale(1.1);
+}
