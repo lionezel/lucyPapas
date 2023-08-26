@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ProductoService } from 'src/app/services/producto.service';
 
@@ -7,9 +7,12 @@ import { ProductoService } from 'src/app/services/producto.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  public promo: any;
+
   constructor(private _productServices: ProductoService) {}
 
-  
-
+  ngOnInit(): void {
+  }
 }
+

@@ -7,6 +7,6 @@ import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
   declarations: [NavbarComponent, CarouselComponent],
   imports: [CommonModule, PrimengModule],
-  exports: [NavbarComponent],
+  exports: [NavbarComponent, CarouselComponent],
 })
 export class SharedModule {}
