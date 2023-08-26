@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<form #registroForm="ngForm" (submit)="registro(registroForm)">
+  <label for="cont-name">Nombre</label>
+  <input
+    type="text"
+    id="cont-name"
+    placeholder="Nombre"
+    required
+    name="name"
+    [(ngModel)]="userRegister.name"
+  />
+
+  <label for="cont-email">Correo</label>
+  <input
+    type="text"
+    id="cont-email"
+    placeholder="Correo"
+    required
+    name="email"
+    [(ngModel)]="userRegister.email"
+  />
+
+  <label for="cont-password">Contraseña</label>
+  <input
+    type="text"
+    id="cont-password"
+    placeholder="Contraseña"
+    required
+    name="password"
+    [(ngModel)]="userRegister.password"
+  />
+</form>
