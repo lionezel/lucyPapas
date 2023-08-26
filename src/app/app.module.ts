@@ -8,6 +8,7 @@ import { PageModule } from './page/page.module';
 import { SharedModule } from './shared/shared.module';
 import { FirebaseModule } from './firebase/firebase.module';
 import { ComponentsModule } from './components/components.module';
+import { PrimengModule } from './primeng/primeng.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { ComponentsModule } from './components/components.module';
     FirebaseModule,
     SharedModule,
     ComponentsModule,
+    PrimengModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
