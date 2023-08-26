@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PageModule } from './page/page.module';
 import { SharedModule } from './shared/shared.module';
 import { FirebaseModule } from './firebase/firebase.module';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { FirebaseModule } from './firebase/firebase.module';
     PageModule,
     FirebaseModule,
     SharedModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
