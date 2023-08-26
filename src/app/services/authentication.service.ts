@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
+import { UserRegister } from '../model/users';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthenticationService {
+  constructor(private _auth: Auth) {}
 
-  constructor() { }
+  register({ email, password }: UserRegister) {
+    return createUserWithEmailAndPassword(this._auth, email, password);
+  }
 }
