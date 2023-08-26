@@ -5,18 +5,17 @@ import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
-
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule],
   exports: [
     ButtonModule,
     MenubarModule,
     InputTextModule,
     ToastModule,
+    CarouselModule,
   ],
 })
-export class PrimengModule { }
+export class PrimengModule {}
