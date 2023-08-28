@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Storage, ref, uploadBytes } from '@angular/fire/storage';
-import { environment } from 'src/environments/environment';
-import 'firebase/compat/storage';
-import firebase from 'firebase/compat/app';
-
-firebase.initializeApp(environment.firebase);
+import { StorageFirebaseService } from 'src/app/services/storage-firebase.service';
 
 @Component({
   selector: 'app-add-peoduct',
@@ -14,8 +9,9 @@ firebase.initializeApp(environment.firebase);
 })
 export class AddPeoductComponent {
   public addProduct: any = [];
+  public image: any[] = [];
 
-  constructor(private _storage: Storage) {}
+  constructor(private _storageServices: StorageFirebaseService) {}
 
   addProducts(addProductsForm: any) {
     if (addProductsForm.valid) {
@@ -25,19 +21,18 @@ export class AddPeoductComponent {
   }
 
   uploadImage($event: any) {
-    const file = $event.target.files[0];
-    console.log(file);
+    const file = $event.target.files;
+    let reader = new FileReader();
+    let name: String = '';
 
-    const imgRef = ref(this._storage, `images/${file.name}`);
-
-    console.log(imgRef)
-
-    uploadBytes(imgRef, file)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    reader.readAsDataURL(file[0]);
+    reader.onload = () => {
+      this.image.push(reader.result);
+      this._storageServices
+        .uploadImage(name + '_' + Date.now(), reader.result)
+        .then((urlImage) => {
+          console.log(urlImage)
+        });
+    };
   }
 }
