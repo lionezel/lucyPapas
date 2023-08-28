@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+
+<form #addProductsForm="ngForm" (submit)="addProducts(addProductsForm)">
+  <div
+    style="
+      align-items: center;
+      text-align: center;
+      font-size: 20px;
+      margin-top: 60px;
+    "
+  >
+    <h1>Añadir nuevos productos</h1>
+    <input
+      type="text"
+      id="cont-name"
+      placeholder="Nombre del producto"
+      required
+      pInputText
+      name="name"
+      [(ngModel)]="addProduct.name"
+      style="margin-top: 20px; width: 60%"
+    />
+    <br />
+
+    <input
+      type="file"
+      id="cont-email"
+      placeholder="Correo"
+      required
+      pInputText
+      name="email"
+      (change)="uploadImage($event)"
+      style="margin-top: 20px; width: 60%"
+    />
+    <br />
+
+    <input
+      type="password"
+      id="cont-password"
+      placeholder="Contraseña"
+      required
+      pInputText
+      name="password"
+      [(ngModel)]="addProduct.password"
+      style="margin-top: 20px; width: 60%"
+    />
+    <br />
+    <div style="margin-top: 20px">
+      <p-button type="submit">Registrarse</p-button>
+    </div>
+  </div>
+</form>
