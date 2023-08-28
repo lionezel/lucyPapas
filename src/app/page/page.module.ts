@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home/home.component';
 import { PrimengModule } from '../primeng/primeng.module';
@@ -16,6 +16,12 @@ import { AddPeoductComponent } from './admin/add-peoduct/add-peoduct.component';
     RegisterComponent,
     AddPeoductComponent,
   ],
-  imports: [CommonModule, PrimengModule, SharedModule, FormsModule],
+  imports: [
+    CommonModule,
+    PrimengModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class PageModule {}

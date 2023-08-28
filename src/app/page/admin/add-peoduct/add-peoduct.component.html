@@ -1,53 +1,47 @@
 <app-navbar></app-navbar>
 
-<form #addProductsForm="ngForm" (submit)="addProducts(addProductsForm)">
-  <div
-    style="
-      align-items: center;
-      text-align: center;
-      font-size: 20px;
-      margin-top: 60px;
-    "
-  >
-    <h1>Añadir nuevos productos</h1>
-    <input
-      type="text"
-      id="cont-name"
-      placeholder="Nombre del producto"
-      required
-      pInputText
-      name="name"
-      [(ngModel)]="addProduct.name"
-      style="margin-top: 20px; width: 60%"
-    />
-    <br />
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <h1 style="text-align: center">Agregar nuevos productos</h1>
 
-    <input
-      type="file"
-      id="cont-email"
-      placeholder="Correo"
-      required
-      pInputText
-      name="email"
-      (change)="uploadImage($event)"
-      id="inputFile"
-      style="margin-top: 20px; width: 60%"
-    />
-    <br />
-
-    <input
-      type="password"
-      id="cont-password"
-      placeholder="Contraseña"
-      required
-      pInputText
-      name="password"
-      [(ngModel)]="addProduct.password"
-      style="margin-top: 20px; width: 60%"
-    />
-    <br />
-    <div style="margin-top: 20px">
-      <p-button type="submit">Registrarse</p-button>
+  <section style="margin-left: 20%; margin-top: 4rem">
+    <div class="mb-3" style="width: 80%">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        placeholder="Nombre del producto"
+      />
     </div>
-  </div>
+    <div class="mb-3" style="width: 80%">
+      <textarea
+        class="form-control"
+        cols="30"
+        rows="10"
+        formControlName="description"
+        placeholder="información del producto..."
+      ></textarea>
+    </div>
+    <div class="mb-3" style="width: 80%">
+      <input
+        type="number"
+        class="form-control"
+        formControlName="price"
+        placeholder="Precio del producto"
+      />
+    </div>
+    <div class="mb-3" style="width: 80%">
+      <input
+        type="file"
+        class="form-control"
+        formControlName="image"
+        (change)="uploadImage($event)"
+      />
+    </div>
+    <input
+      type="submit"
+      value="Enviar"
+      class="btn btn-success"
+      style="width: 80%"
+    />
+  </section>
 </form>

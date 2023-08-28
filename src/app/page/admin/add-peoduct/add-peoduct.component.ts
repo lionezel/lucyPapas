@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { ProductoService } from 'src/app/services/producto.service';
 
 import { StorageFirebaseService } from 'src/app/services/storage-firebase.service';
 
@@ -8,16 +10,21 @@ import { StorageFirebaseService } from 'src/app/services/storage-firebase.servic
   styleUrls: ['./add-peoduct.component.css'],
 })
 export class AddPeoductComponent {
-  public addProduct: any = [];
+  public addProduct: any | null = [];
   public image: any[] = [];
 
-  constructor(private _storageServices: StorageFirebaseService) {}
+  formulario: FormGroup;
 
-  addProducts(addProductsForm: any) {
-    if (addProductsForm.valid) {
-    } else {
-      alert('error');
-    }
+  constructor(
+    private _storageServices: StorageFirebaseService,
+    private _productServices: ProductoService
+  ) {
+    this.formulario = new FormGroup({
+      name: new FormControl(),
+      description: new FormControl(),
+      price: new FormControl(),
+      image: new FormControl(),
+    });
   }
 
   uploadImage($event: any) {
@@ -26,13 +33,17 @@ export class AddPeoductComponent {
     let name: String = '';
 
     reader.readAsDataURL(file[0]);
-    reader.onload = () => {
-      this.image.push(reader.result);
-      this._storageServices
-        .uploadImage(name + '_' + Date.now(), reader.result)
-        .then((urlImage) => {
-          console.log(urlImage)
-        });
-    };
+    this.image.push(reader.result);
+    this._storageServices
+      .uploadImage(name + '_' + Date.now(), reader.result)
+      .then((urlImage) => {});
+  }
+
+  async onSubmit() {
+    console.log(this.formulario.value);
+    const response = await this._productServices.addProduct(
+      this.formulario.value
+    );
+    console.log(response);
   }
 }

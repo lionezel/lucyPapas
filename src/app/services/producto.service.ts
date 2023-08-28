@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 import { Products } from '../model/products';
 
@@ -12,7 +13,7 @@ export class ProductoService {
   constructor(private _fireStore: Firestore) {}
 
   addProduct(product: Products) {
-    const productRef = collection(this._fireStore, 'product');
+    const productRef = collection(this._fireStore, 'products');
     return addDoc(productRef, product);
   }
 }
