@@ -10,14 +10,19 @@ import { AddPeoductComponent } from './admin/add-peoduct/add-peoduct.component';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, AddPeoductComponent],
+  declarations: [
+    LoginComponent,
+    RegisterComponent,
+    AddPeoductComponent,
+
+  ],
   imports: [
     CommonModule,
     PrimengModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    HomeModule,
+    HomeModule
   ],
 })
 export class PageModule {}
