@@ -2,26 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HomeComponent } from './home/home.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { AddPeoductComponent } from './admin/add-peoduct/add-peoduct.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    LoginComponent,
-    RegisterComponent,
-    AddPeoductComponent,
-  ],
+  declarations: [LoginComponent, RegisterComponent, AddPeoductComponent],
   imports: [
     CommonModule,
     PrimengModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    HomeModule,
   ],
 })
 export class PageModule {}
