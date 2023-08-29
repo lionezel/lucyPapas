@@ -29,19 +29,30 @@
         placeholder="Precio del producto"
       />
     </div>
-    <div class="mb-3" style="width: 80%">
+
+    <div style="width: 80%">
+      <p-dropdown
+        [options]="category_arr"
+        optionLabel="name"
+        placeholder="Selecciona el tipo"
+        formControlName="category"
+      ></p-dropdown>
+    </div>
+
+    <div>
       <input
         type="file"
         class="form-control"
         formControlName="image"
         (change)="uploadImage($event)"
+        style="margin-top: 20px"
       />
     </div>
     <input
       type="submit"
       value="Enviar"
       class="btn btn-success"
-      style="width: 80%"
+      style="width: 80%; margin-top: 20px; margin-bottom: 20px"
     />
   </section>
 </form>

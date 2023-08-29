@@ -6,6 +6,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
 import { CarouselModule } from 'primeng/carousel';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [],
@@ -16,6 +17,7 @@ import { CarouselModule } from 'primeng/carousel';
     InputTextModule,
     ToastModule,
     CarouselModule,
+    DropdownModule,
   ],
 })
 export class PrimengModule {}

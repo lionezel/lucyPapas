@@ -3,5 +3,10 @@ export interface Products {
   name: string;
   image: string;
   precio: number;
+  category: Category[];
   descripcion: string;
+}
+
+export interface Category {
+  name: string
 }
