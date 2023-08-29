@@ -19,8 +19,8 @@ export class StorageFirebaseService {
       let response = await this.storageRef
         .child('product/' + name)
         .putString(image, 'data_url');
-      return await response.ref.getDownloadURL();
-    } catch (error) {
+        return await response.ref.getDownloadURL();
+      } catch (error) {
       return null;
     }
   }

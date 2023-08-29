@@ -12,6 +12,7 @@ import { StorageFirebaseService } from 'src/app/services/storage-firebase.servic
 export class AddPeoductComponent {
   public addProduct: any | null = [];
   public image: any[] = [];
+  public imageUrl: any
 
   formulario: FormGroup;
 
@@ -36,8 +37,14 @@ export class AddPeoductComponent {
     this.image.push(reader.result);
     this._storageServices
       .uploadImage(name + '_' + Date.now(), reader.result)
-      .then((urlImage) => {});
+      .then((urlImage) => {
+        let product = {
+          imgProduct: urlImage
+        }
+        console.log(product)
+      });
   }
+
 
   async onSubmit() {
     console.log(this.formulario.value);
