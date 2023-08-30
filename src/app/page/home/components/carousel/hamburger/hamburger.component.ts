@@ -9,17 +9,29 @@ import { ProductoService } from 'src/app/services/producto.service';
 })
 export class HamburgerComponent implements OnInit {
   public hamburger_arr: Products[] = [];
+  public potato_arr: Products[] = [];
+  public drink_arr: Products[] = [];
+  
 
   constructor(private _productServices: ProductoService) {}
 
   ngOnInit(): void {
-    this.getAllHamgurger();
+    this.getProducts();
   }
 
-  getAllHamgurger() {
+  getProducts() {
     this._productServices.getPlaces().subscribe((response) => {
-      this.hamburger_arr = response;
-      console.log(this.hamburger_arr);
+      this.hamburger_arr =
+        response.filter((product)=> product.category?.name.trim() === 'Hamgurguesa')
+        this.potato_arr =
+        response.filter((product)=> product.category?.name === 'Papas')
+        this.drink_arr =
+        response.filter((product)=> product.category?.name === 'Bebidas')
+
+        console.log(this.hamburger_arr)
     });
   }
+
+
+  
 }
