@@ -8,21 +8,18 @@ import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { AddPeoductComponent } from './admin/add-peoduct/add-peoduct.component';
 import { HomeModule } from './home/home.module';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegisterComponent,
-    AddPeoductComponent,
-
-  ],
+  declarations: [LoginComponent, RegisterComponent, AddPeoductComponent],
   imports: [
     CommonModule,
     PrimengModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    HomeModule
+    HomeModule,
+    ProductsModule,
   ],
 })
 export class PageModule {}
