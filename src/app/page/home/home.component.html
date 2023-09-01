@@ -2,67 +2,19 @@
   .body {
     display: flex;
   }
+
+  .home {
+    transition: .5s ease;
+  }
+
+
 </style>
 
 <div class="body">
-  <app-navbar></app-navbar>
-  <app-prom></app-prom>
-
-  <section class="categorys" style="width: 100%; display: flex">
-    <div
-      class="category"
-      style="
-        width: 20%;
-        margin-left: 17%;
-        text-align: center;
-        transition: 0.5s ease;
-        border-radius: 15px;
-      "
-    >
-      <img
-        src="../../../assets/ecommerce/category/hamburguesa.jpg"
-        alt=""
-        style="width: 100%; border-radius: 15px; height: 55%"
-      />
-      <span style="font-size: 70%">Hamburgusas</span>
-    </div>
-
-    <div
-      class="category"
-      style="
-        width: 20%;
-        margin-left: 10px;
-        text-align: center;
-        transition: 0.5s ease;
-        border-radius: 15px;
-      "
-    >
-      <img
-        src="../../../assets/ecommerce/category/papas.jpg"
-        alt=""
-        style="width: 100%; border-radius: 15px; height: 55%"
-      />
-      <span style="font-size: 70%">Papas</span>
-    </div>
-
-    <div
-      class="category"
-      style="
-        width: 20%;
-        margin-left: 10px;
-        text-align: center;
-        transition: 0.5s ease;
-        border-radius: 15px;
-      "
-    >
-      <img
-        src="../../../assets/ecommerce/category/bebidas.jpg"
-        alt=""
-        style="width: 100%; border-radius: 15px; height: 55%"
-      />
-      <span style="font-size: 70%">Bebidas</span>
-    </div>
-  </section>
-
-  <app-hamburger></app-hamburger>
+  <app-navbar class="nav"></app-navbar>
+  <div class="home">
+    <app-prom></app-prom>
+    <app-category></app-category>
+    <app-hamburger></app-hamburger>
+  </div>
 </div>

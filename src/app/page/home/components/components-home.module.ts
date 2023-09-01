@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { CarouselModule } from './carousel/carousel.module';
 import { PromComponent } from './prom/prom.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
-    PromComponent
+    PromComponent,
+    CategoryComponent
   ],
   imports: [CommonModule, CarouselModule],
 
   exports: [
-    PromComponent
+    PromComponent,
+    CategoryComponent
   ]
 })
 export class ComponentsHomeModule {}
