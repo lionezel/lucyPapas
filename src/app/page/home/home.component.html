@@ -1,102 +1,68 @@
-<app-navbar></app-navbar>
+<style>
+  .body {
+    display: flex;
+  }
+</style>
 
-<div
-  id="carouselExampleAutoplaying"
-  class="carousel slide"
-  data-bs-ride="carousel"
->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+<div class="body">
+  <app-navbar></app-navbar>
+  <app-prom></app-prom>
+
+  <section class="categorys" style="width: 100%; display: flex">
+    <div
+      class="category"
+      style="
+        width: 20%;
+        margin-left: 17%;
+        text-align: center;
+        transition: 0.5s ease;
+        border-radius: 15px;
+      "
+    >
       <img
-        src="../../../assets/ecommerce/slider/promo3.jpg"
-        class="d-block w-100"
-        alt="..."
+        src="../../../assets/ecommerce/category/hamburguesa.jpg"
+        alt=""
+        style="width: 100%; border-radius: 15px; height: 55%"
       />
+      <span style="font-size: 70%">Hamburgusas</span>
     </div>
-    <div class="carousel-item">
+
+    <div
+      class="category"
+      style="
+        width: 20%;
+        margin-left: 10px;
+        text-align: center;
+        transition: 0.5s ease;
+        border-radius: 15px;
+      "
+    >
       <img
-        src="../../../assets/ecommerce/slider/promo4.jpg"
-        class="d-block w-100"
-        alt="..."
+        src="../../../assets/ecommerce/category/papas.jpg"
+        alt=""
+        style="width: 100%; border-radius: 15px; height: 55%"
       />
+      <span style="font-size: 70%">Papas</span>
     </div>
-  </div>
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExampleAutoplaying"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExampleAutoplaying"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+
+    <div
+      class="category"
+      style="
+        width: 20%;
+        margin-left: 10px;
+        text-align: center;
+        transition: 0.5s ease;
+        border-radius: 15px;
+      "
+    >
+      <img
+        src="../../../assets/ecommerce/category/bebidas.jpg"
+        alt=""
+        style="width: 100%; border-radius: 15px; height: 55%"
+      />
+      <span style="font-size: 70%">Bebidas</span>
+    </div>
+  </section>
+
+  <app-hamburger></app-hamburger>
 </div>
-
-<section class="categorys" style="width: 100%; display: flex">
-  <div
-    class="category"
-    style="
-      width: 20%;
-      margin-left: 17%;
-      text-align: center;
-      transition: 0.5s ease;
-      border-radius: 15px;
-    "
-  >
-    <img
-      src="../../../assets/ecommerce/category/hamburguesa.jpg"
-      alt=""
-      style="width: 100%; border-radius: 15px; height: 55%"
-    />
-    <span style="font-size: 70%">Hamburgusas</span>
-  </div>
-
-  <div
-    class="category"
-    style="
-      width: 20%;
-      margin-left: 10px;
-      text-align: center;
-      transition: 0.5s ease;
-      border-radius: 15px;
-    "
-  >
-    <img
-      src="../../../assets/ecommerce/category/papas.jpg"
-      alt=""
-      style="width: 100%; border-radius: 15px; height: 55%"
-    />
-    <span style="font-size: 70%">Papas</span>
-  </div>
-
-  <div
-    class="category"
-    style="
-      width: 20%;
-      margin-left: 10px;
-      text-align: center;
-      transition: 0.5s ease;
-      border-radius: 15px;
-    "
-  >
-    <img
-      src="../../../assets/ecommerce/category/bebidas.jpg"
-      alt=""
-      style="width: 100%; border-radius: 15px; height: 55%"
-    />
-    <span style="font-size: 70%">Bebidas</span>
-  </div>
-</section>
-
-<app-hamburger></app-hamburger>
-
-
