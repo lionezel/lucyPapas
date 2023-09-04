@@ -9,6 +9,7 @@
       aria-controls="navbarNavDropdown"
       aria-expanded="false"
       aria-label="Toggle navigation"
+      style="margin-left: 17rem"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,11 +32,17 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Dropdown link
+            productos
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/product/hamburger']"
+                >Hamburguesas</a
+              >
+              <hr />
+            </li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
+            <hr />
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>

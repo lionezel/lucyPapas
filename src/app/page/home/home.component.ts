@@ -11,6 +11,7 @@ import { ProductoService } from 'src/app/services/producto.service';
 export class HomeComponent implements OnInit {
   public promo: any;
   public products: Products[] = [];
+  public load_btn = true;
 
   constructor(private _productServices: ProductoService) {}
 
@@ -19,5 +20,6 @@ export class HomeComponent implements OnInit {
       console.log(response);
       this.products = response;
     });
+    this.load_btn = true;
   }
 }
