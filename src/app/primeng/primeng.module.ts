@@ -8,6 +8,7 @@ import { ToastModule } from 'primeng/toast';
 import { CarouselModule } from 'primeng/carousel';
 import { DropdownModule } from 'primeng/dropdown';
 import { DividerModule } from 'primeng/divider';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 
 @NgModule({
   declarations: [],
@@ -20,6 +21,7 @@ import { DividerModule } from 'primeng/divider';
     CarouselModule,
     DropdownModule,
     DividerModule,
+    BreadcrumbModule
   ],
 })
 export class PrimengModule {}

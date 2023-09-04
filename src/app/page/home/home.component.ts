@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   public promo: any;
   public products: Products[] = [];
   public load_btn = true;
+  public itemBread: any | undefined
 
   constructor(private _productServices: ProductoService) {}
 
@@ -21,5 +22,11 @@ export class HomeComponent implements OnInit {
       this.products = response;
     });
     this.load_btn = true;
+
+    this.breadCrumb();
+  }
+
+  breadCrumb(){
+    this.itemBread = [{ label: 'Inicio' , icon: 'pi pi-home',  routerLink: '/'}]
   }
 }

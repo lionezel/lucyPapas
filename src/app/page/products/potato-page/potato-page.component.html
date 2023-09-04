@@ -1,0 +1,104 @@
+<style>
+    .text {
+      margin-left: 20px;
+      margin-top: 20px;
+      height: 60%;
+      width: 100%;
+    }
+  
+    .btn {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    button {
+      margin-right: 20px;
+    }
+  
+    h1 {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+  
+    .main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 10px;
+    }
+  
+    .cards {
+      width: 100%;
+      height: 30rem;
+      border-radius: 20px;
+    }
+  
+    .cards img {
+      width: 100%;
+      height: 70%;
+      border-radius: 20px 20px 0px 0px;
+    }
+  
+    .cards span {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    @media screen and (max-width: 500px) {
+      .text {
+        height: 60%;
+        width: 45%;
+      }
+  
+      button {
+        position: absolute;
+        left: 17%;
+      }
+  
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+  
+      .main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+  
+      .cards {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 13rem;
+      }
+  
+      .cards img {
+        width: 50%;
+        height: 60%;
+        border-radius: 20px;
+      }
+    }
+  </style>
+  
+  <app-navbar></app-navbar>
+  
+  <app-breadcrumb [bread]="itemBread"></app-breadcrumb>
+  
+  <h1>Salchipapas</h1>
+  <div class="main">
+    <div class="cards" *ngFor="let item of potato_arr">
+      <img [src]="item.image" alt="" />
+      <div class="text">
+        <h6>{{ item.name }}</h6>
+        <p>{{ item.description }}</p>
+        <div class="btn">
+          <h6>COP: {{ item.price }}</h6>
+          <button class="btn btn-success">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

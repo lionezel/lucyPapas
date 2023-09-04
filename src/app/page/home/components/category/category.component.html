@@ -1,55 +1,71 @@
+<style>
+  .category {
+    width: 20%;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .category:hover {
+    width: 600px;
+    opacity: 1;
+    transform: scale(1.1);
+  }
+</style>
+
 <section class="categorys" style="width: 100%; display: flex">
-    <div
-      class="category"
-      style="
-        width: 20%;
-        margin-left: 17%;
-        text-align: center;
-        transition: 0.5s ease;
-        border-radius: 15px;
-      "
-    >
-      <img
-        src="../../../assets/ecommerce/category/hamburguesa.jpg"
-        alt=""
-        style="width: 100%; border-radius: 15px; height: 55%"
-      />
-      <span style="font-size: 70%">Hamburgusas</span>
-    </div>
+  <div
+    class="category"
+    style="
+      width: 20%;
+      margin-left: 17%;
+      text-align: center;
+      transition: 0.5s ease;
+      border-radius: 15px;
+    "
+    routerLink="/products/hamburger"
+  >
+    <img
+      src="../../../assets/ecommerce/category/hamburguesa.jpg"
+      alt=""
+      style="width: 100%; border-radius: 15px; height: 55%"
+    />
+    <span style="font-size: 70%">Hamburgusas</span>
+  </div>
 
-    <div
-      class="category"
-      style="
-        width: 20%;
-        margin-left: 10px;
-        text-align: center;
-        transition: 0.5s ease;
-        border-radius: 15px;
-      "
-    >
-      <img
-        src="../../../assets/ecommerce/category/papas.jpg"
-        alt=""
-        style="width: 100%; border-radius: 15px; height: 55%"
-      />
-      <span style="font-size: 70%">Papas</span>
-    </div>
+  <div
+    class="category"
+    style="
+      width: 20%;
+      margin-left: 10px;
+      text-align: center;
+      transition: 0.5s ease;
+      border-radius: 15px;
+    "
+    routerLink="/products/potato"
+  >
+    <img
+      src="../../../assets/ecommerce/category/papas.jpg"
+      alt=""
+      style="width: 100%; border-radius: 15px; height: 55%"
+    />
+    <span style="font-size: 70%">Papas</span>
+  </div>
 
-    <div
-      class="category"
-      style="
-        width: 20%;
-        margin-left: 10px;
-        text-align: center;
-        transition: 0.5s ease;
-        border-radius: 15px;
-      "
-    >
-      <img
-        src="../../../assets/ecommerce/category/bebidas.jpg"
-        alt=""
-        style="width: 100%; border-radius: 15px; height: 55%"
-      />
-      <span style="font-size: 70%">Bebidas</span>
-    </div>
-  </section>
+  <div
+    class="category"
+    style="
+      width: 20%;
+      margin-left: 10px;
+      text-align: center;
+      transition: 0.5s ease;
+      border-radius: 15px;
+    "
+  >
+    <img
+      src="../../../assets/ecommerce/category/bebidas.jpg"
+      alt=""
+      style="width: 100%; border-radius: 15px; height: 55%"
+    />
+    <span style="font-size: 70%">Bebidas</span>
+  </div>
+</section>

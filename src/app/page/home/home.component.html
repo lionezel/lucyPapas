@@ -1,14 +1,6 @@
-<style>
-  .body {
-    display: flex;
-  }
+<app-navbar></app-navbar>
 
-  .home {
-    transition: .5s ease;
-  }
-
-
-</style>
+<app-breadcrumb [bread]="itemBread"></app-breadcrumb>
 
 <div class="body">
   <app-navbar class="nav"></app-navbar>
@@ -18,3 +10,12 @@
     <app-hamburger></app-hamburger>
   </div>
 </div>
+
+<app-category></app-category>
+
+<app-hamburger></app-hamburger>
+
+
+<a [routerLink]="['/product/hamburger']">dasdad</a>
+
+
