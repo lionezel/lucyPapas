@@ -6,6 +6,7 @@ import { RegisterComponent } from './page/user/register/register.component';
 import { AddPeoductComponent } from './page/admin/add-peoduct/add-peoduct.component';
 import { ProductsByIdComponent } from './page/products/products-by-id/products-by-id.component';
 import { HamburgerComponent } from './page/home/components/carousel/hamburger/hamburger.component';
+import { HamburgerCatComponent } from './page/products/hamburger-cat/hamburger-cat.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,7 +16,7 @@ const routes: Routes = [
 
   { path: 'addProducts', component: AddPeoductComponent },
 
-  { path: 'productsById/:id', component: HamburgerComponent },
+  { path: 'products/hamburger', component: HamburgerCatComponent },
   { path: 'productsById/:id', component: ProductsByIdComponent },
 ];
 
