@@ -22,6 +22,7 @@ export class HamburguerPageComponent implements OnInit {
       this.hamburgurger_arr = response.filter(
         (product) => product.category?.name.trim() === 'Hamgurguesa'
       );
+      console.log(this.hamburgurger_arr)
     });
   }
 }

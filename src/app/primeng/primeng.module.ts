@@ -7,6 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
 import { CarouselModule } from 'primeng/carousel';
 import { DropdownModule } from 'primeng/dropdown';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
   declarations: [],
@@ -18,6 +19,7 @@ import { DropdownModule } from 'primeng/dropdown';
     ToastModule,
     CarouselModule,
     DropdownModule,
+    DividerModule,
   ],
 })
 export class PrimengModule {}
