@@ -6,8 +6,13 @@ import {
   collection,
   collectionData,
 } from '@angular/fire/firestore';
+
+import { doc, documentId, getDoc } from "firebase/firestore"; 
 import { Products } from '../model/products';
 import { Observable } from 'rxjs';
+
+
+
 
 @Injectable({
   providedIn: 'root',
@@ -26,4 +31,5 @@ export class ProductoService {
       Products[]
     >;
   }
+
 }
