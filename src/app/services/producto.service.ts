@@ -5,9 +5,8 @@ import {
   addDoc,
   collection,
   collectionData,
+  doc
 } from '@angular/fire/firestore';
-
-import { doc, documentId, getDoc } from "firebase/firestore"; 
 import { Products } from '../model/products';
 import { Observable } from 'rxjs';
 
@@ -25,11 +24,19 @@ export class ProductoService {
     return addDoc(productRef, product);
   }
 
+  addCar(product: Products) {
+    const productRef = collection(this._fireStore, 'cars');
+    return addDoc(productRef, product);
+  }
+
   getPlaces(): Observable<Products[]> {
     const placeRef = collection(this._fireStore, 'products');
     return collectionData(placeRef, { idField: 'id' }) as Observable<
       Products[]
     >;
   }
+
+
+  
 
 }

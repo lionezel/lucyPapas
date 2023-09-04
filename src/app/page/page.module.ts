@@ -9,9 +9,10 @@ import { RegisterComponent } from './user/register/register.component';
 import { AddPeoductComponent } from './admin/add-peoduct/add-peoduct.component';
 import { HomeModule } from './home/home.module';
 import { ProductsModule } from './products/products.module';
+import { ProfileComponent } from './user/profile/profile.component';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, AddPeoductComponent],
+  declarations: [LoginComponent, RegisterComponent, AddPeoductComponent, ProfileComponent],
   imports: [
     CommonModule,
     PrimengModule,

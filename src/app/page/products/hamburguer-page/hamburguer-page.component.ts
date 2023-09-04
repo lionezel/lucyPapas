@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Products } from 'src/app/model/products';
+import { CarritoService } from 'src/app/services/carrito.service';
 import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class HamburguerPageComponent implements OnInit {
   public hamburgurger_arr: Products[] = [];
   public itemBread: any | undefined
 
-  constructor(private _productServices: ProductoService) {}
+  constructor(private _productServices: ProductoService, private _carritoServices: CarritoService) {}
 
   ngOnInit(): void {
     this.getHamburger();
@@ -30,5 +31,8 @@ export class HamburguerPageComponent implements OnInit {
       );
       console.log(this.hamburgurger_arr)
     });
+  }
+  addCarrito(){
+    
   }
 }
