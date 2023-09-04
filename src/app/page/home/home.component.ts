@@ -27,6 +27,6 @@ export class HomeComponent implements OnInit {
   }
 
   breadCrumb(){
-    this.itemBread = [{ label: 'Inicio' , icon: 'pi pi-home' }]
+    this.itemBread = [{ label: 'Inicio' , icon: 'pi pi-home',  routerLink: '/'}]
   }
 }

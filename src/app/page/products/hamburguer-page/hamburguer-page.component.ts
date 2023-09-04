@@ -10,11 +10,17 @@ import { ProductoService } from 'src/app/services/producto.service';
 })
 export class HamburguerPageComponent implements OnInit {
   public hamburgurger_arr: Products[] = [];
+  public itemBread: any | undefined
 
   constructor(private _productServices: ProductoService) {}
 
   ngOnInit(): void {
     this.getHamburger();
+    this.breadCrumb();
+  }
+
+  breadCrumb(){
+    this.itemBread = [{ label: 'Inicio' , icon: 'pi pi-home', routerLink: '/' }, { label: 'Hamburguesas' , icon: 'pi pi-sun' } ]
   }
 
   getHamburger() {
